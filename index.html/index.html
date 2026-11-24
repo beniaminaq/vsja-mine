@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VSJA Mine</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#07110d;color:white;font-family:Arial,sans-serif;text-align:center}
+header{padding:25px;font-size:25px;font-weight:bold;color:#53f59b}
+main{padding:20px}
+.card{background:#10251b;border:1px solid #245c3c;border-radius:20px;padding:25px;margin:15px 0}
+.balance{font-size:34px;color:#53f59b;font-weight:bold;margin:15px}
+.mine{width:175px;height:175px;border-radius:50%;border:4px solid #53f59b;background:#123b27;color:white;font-size:23px;font-weight:bold;margin:25px auto;box-shadow:0 0 30px #1c9b59;cursor:pointer}
+button{cursor:pointer}
+nav{position:fixed;bottom:0;left:0;right:0;background:#10251b;display:flex;justify-content:space-around;padding:17px 3px}
+nav button{background:none;border:0;color:#b9d8c5;font-size:12px}
+nav button:focus{color:#53f59b}
+#message{color:#53f59b;min-height:24px}
+</style>
+</head>
+<body>
+<header>VSJA MINE</header>
+<main>
+<div class="card">
+<p>YOUR BALANCE</p>
+<div class="balance" id="balance">0</div>
+<p>DEMO POINTS</p>
+</div>
+<button class="mine" onclick="mine()">⛏️<br> MINE</button>
+<p id="message">Tap to collect demo points</p>
+<div class="card">
+<h3>Mining Status</h3>
+<p>Mining power: 1 point / tap</p>
+<p>Network: TON (demo only)</p>
+</div>
+</main>
+<nav>
+<button onclick="home()">⌂<br>Home</button>
+<button onclick="earn()">✦<br>Earn</button>
+<button onclick="invite()">♧<br>Invite</button>
+<button onclick="wallet()">◈<br>Wallet</button>
+</nav>
+<script>
+let balance=0;
+function mine(){
+ balance++;
+ document.getElementById('balance').textContent=balance;
+ document.getElementById('message').textContent='+1 demo point collected!';
+}
+function home(){document.getElementById('message').textContent='Welcome to VSJA Mine!'}
+function earn(){document.getElementById('message').textContent='More earning features coming soon.'}
+function invite(){document.getElementById('message').textContent='Invite feature coming soon.'}
+function wallet(){document.getElementById('message').textContent='Wallet connection coming soon.'}
+</script>
+</body>
+  </html>
+  
